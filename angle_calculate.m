@@ -1,3 +1,6 @@
+%% Read FOMT data from TDMS file, transfer bead's cartesian coordinate to polar coordinate.
+%% Count distributions of angle and extension of magnetic beads and fit using Gaussian Mixture Model.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% select interval
 close all
 clear
@@ -5,8 +8,8 @@ select_interval = 1;
 start_time = 322.5; end_time = 327.5; 
 fit = 1; 
 jump_time = 324.2; 
-%% read data
-[file_name,filefolder]=uigetfile({'*.tdms*'},'选择文件');
+%% read data from TDMS file
+[file_name,filefolder]=uigetfile({'*.tdms*'});
 Data_Path=fullfile(filefolder,file_name);
 
 tic
